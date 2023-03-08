@@ -8,3 +8,13 @@ h1{
 h2{
     color: aliceblue;
 }
+img{
+    width: 200px; /* Ancho de la imagen */
+    height: 200px; /* Alto de la imagen */
+}
+img:hover{
+    background-color: blueviolet;
+}
+tr:hover{
+    background-color: blueviolet;
+}
