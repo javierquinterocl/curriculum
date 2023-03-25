@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crear Cuenta</h1>
+            <label for="">Correo del usuario</label>
+            <br>
+            <input type="email" name="email "placeholder="nombre@dominio.com" required /> 
+            <button>Enviar</button>
+            <br> 
+            <label for="">Crea una Contraseña</label>
+            <br>
+            
+            <input type="password" name="" id="contraseña" minlength="6" maxlength="12" placeholder="(Maximo 8 Caracteres)" required pattern="[A-Za-z0-9]"/>
+            <button>Enviar</button>
+
+            <br><label for="">Nombre de usuario</label><br>
+            <input type="text" required pattern="[A-Za-z0-9]{5,40}" minlength="5" maxlength="40">
+            <button>Enviar</button>
+            <form name="formulario" method="post" action="/send.php">
+                <label for="Ingrese el modelo del coche">Ingrese el modelo del coche</label><br>
+                <input type="text" name="coche" placeholder="Su modelo de coche"
+                       required pattern="A|a(1|3|4|15)"
+                       title="Modelos posibles: A1, A3, A4 y A15" />
+            </form>
+</body>
+</html>
