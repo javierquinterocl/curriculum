@@ -5,21 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h1>Formulario</h1>
-    <form action="">
+    <form name="formulario" method="post" action="/html/form.html">
         <fieldset>
-            <label for="">Nombre Completo</label>
-            <input type="text">
+            <h1>Crear Cuenta</h1>
+            <label for="">Correo del usuario</label>
+            <br>
+            <input type="email" name="email " placeholder="nombre@dominio.com" required> 
+            <input type="submit" value="Enviar" required />
+            <br> 
+            <label for="">Crea una Contraseña</label>
+            <br>
             
-            <label for="">Direccion</label>
-            <input type="text">
+            <input type="password" name="" id="contraseña" minlength="6" maxlength="12" placeholder="(Maximo 8 Caracteres)" required>
+            <input type="submit" value="Enviar" />
+            <meter min="0" max="100"
+         low="25" high="75"
+         optimum="100" value="50">
 
-            <label for="">Observacion</label>
-            <input type="text">
+            
+        </fieldset>
+
+        <fieldset>
+            <h1>Datos Personales</h1>
+
+            <label for=""> Nombre Completo</label>
+            <br>
+            <input type="text" placeholder="Nombre" required class="inputcolors" minlength="5" maxlength="40"" >
+            <button>Enviar</button>
+            <br>
+            <label for="">Apellidos</label>
+            <br>
+            <input type="" placeholder="Ejem: Quintero" required>
+            <button>Enviar</button>
+            <br>
+            <label for="">Fecha de Nacimiento</label>
+            <br>
+            <input type="date" name="Fecha" min="1900-01-01" max="2020-01-01" required>
+            <br>
+            <label for="sexo">Sexo:</label>
+            <br>
+            <label for="Hombre">Masculino</label>
+            <input type="radio" name="sexo" id="hombre" value="H">
+            <label for="Mujer">Femenino</label>
+            <input type="radio" name="sexo" id="mujer" value="M">
+            <label for="">Otro</label>
+            <input type="text"  maxlength="10" minlength="5"required pattern="[Aa-Za-z]"   >
+            <button>Enviar</button>
+            <br>
+            <label for="">Tipo de documento</label>
+            <br>
+            <select name="" id="">
+                <option value="0" selected>Documento</option>
+                <option value="1">Tarjeta de identidad</option>
+                <option value="2">Cedula</option>
+                <option value="3">Pasaporte</option>
+            </select>
+            <br>
+            <label for="Foto de documento de identidad">Foto del documento de identidad</label>
+            <input type="file" >
+
+        </fieldset>
+
+        <fieldset>
+            <h1>Contacto</h1>
+            <label for="">Numero de Telefono</label>
+           
+            <br>
+            <input type="text" placeholder="***-***-****"  maxlength="10" minlength="10" required >
+            <button>Enviar</button>
+            <br>
+            <label for="">Direccion</label>
+            <br>
+            <input type="text" required>
             <button>Enviar</button>
         </fieldset>
+
+        <fieldset>
+            <h1>Vinculo Personal</h1>
+            <label for="">Cuantos hermanos tiene</label>
+            <select name="combo" >
+                <option value="Opcion"selected>Selecione</option>
+                <option value="0">Ninguno</option>
+                <option value="1" >Un Hermano</option> <!-- Opción por defecto -->
+                <option value="2">Dos hermanos</option>
+                <option value="3">Tres hermanos</option>
+                <option value="4">Cuatro hermanos o mas</option>
+              </select>
+              <br>
+              <label for="">Nivel educativo actual</label>
+              <br>
+              <select name="combo" multiple>
+                
+                <optgroup label="Estudiantil">
+                  <option value="1" label="Primaria"> </option>
+                  <option value="2" label="Secundaria"></option>
+                  <option value="3" label="Bachiller"></option>
+                </optgroup>
+            
+                <optgroup label="Superior">
+                  <option value="2" label="Universitario"> </option>
+                  <option value="3" label="Egresado"> </option>
+                </optgroup>
+              </select>
+              <br>
+              <label for="">Cargar Foto de Diploma</label>
+              <br>
+              <input type="file">
+        </fieldset>
+        <input type="submit" value="Enviar Formulario">
+        <input type="reset" value="Borrar formulario" />
+        <meter min="0" max="100"
+            low="25" high="75"
+            optimum="100" value="50">
     </form>
 </body>
 </html>
