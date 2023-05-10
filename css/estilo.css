@@ -44,6 +44,7 @@ nav {
 .enlaces-header {
     font-weight: 300;
     margin: auto;
+    transition: all ease-in-out .6s;
 }
 .nav .enlaces-header a {
     color: rgb(255, 255, 255);
@@ -124,7 +125,7 @@ nav {
     font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
-    box-shadow: 0 8px 32px rgba(63, 63, 63, 0.46);
+    
     
 }
 
@@ -331,6 +332,7 @@ transition: all ease-in-out .6s;
 /* BREAK POINTS */
 
 @media screen and (max-width:700px){
+    /* BARRA DE MENU DE HAMBURGUESA  */
    .hamburguer{
     display: block;
    }
@@ -360,5 +362,50 @@ transition: all ease-in-out .6s;
 
    }
 
+   /* la visual principal */
+   h1{
+    font-size: 25px;
+
+   }
+   .contenido-header{
+    width: 100%;
+    height: 480px;
+    display: block;
+   }
+
+   .contenido-header > img{
+    width: 120px;
+    height: 120px;
+    animation: ease-in animacion 0.5s;
+    margin-top: 10px;
+    border-radius: 50%;
+    
+    
+
+   }
+   .contenido-header > img , .textos-header{
+    margin-left: 0px;
+   }
+
+
+   /* SECTION EDUCACION*/   
+   .education , .certificado, .partFooter {
+    width: 80%;
+    margin-bottom: 15px;
+
+   }
+
+   .certificado  img{
+    height: 130px;
+   }
+
+   /*FOOTER */
+   .partFooter img{
+    display: none;
+   }
+
+   footer{
+    padding: 0px;
+   }
 
 }
