@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="contenedor">
+    <h1>WILDER DUARTE   </h1>
+    <input type="text" id="variable">
+    <button onclick="name_function()" id="name_event">Calcular</button>
+    <h1 id="titulo"></h1>
+    <p id="cambiar_fondo">cambiar fondo</p>
+    <style>
+        #cambiar_fondo{
+            background-color: aqua;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #dfdfdf;
+        }
+        #cambiar_fondo:hover{
+            box-shadow: 0 0 10px gray;
+
+        }
+        
+    </style>
+    <script>
+        
+        console.log("ingresa");
+        //variables //
+        const nameuno = "ESTO es cualquier cosa";
+        var name_dos = "esto es cualquier cosa";
+        let nameTres = "esto es cualquier cosa";
+        console.log(nameuno + "\n" + name_dos + "\n" + nameTres);
+
+        //tipos de datos
+
+        let num_a = 10;
+        let num_b = 5.5;
+        let num_c = "20";
+        let boolean = false;
+        let stringvar = "mi nombre es ";
+        let arraynum = [1,2,3,4,5,"6","7","8"];
+        let dias_Semana = ["Lunes","Martes","Miercoles","Jueves","Viernes"];
+        let users = [
+            {name: "JAvier", last_name:"QUintero", age:19},
+            {name: "Juan", last_name:"pro", age:19},
+            {name: "JAvier", last_name:"QUintero", age:19}
+        ]
+        //operadores aritmeticos + - * / % 
+        let suma = num_a + num_b;
+        let resta = num_a - num_b;
+        let multi = num_a * num_b;
+        let divi = num_a / num_b;
+        let module = num_a % num_b;
+        let expo = num_a ^ num_b;
+        console.log(suma);
+        suma = Math.round(suma);
+        console.log("Suma = "+suma+ "\n Resta = "+resta);
+        //operadores comparacion < / > / <> / <= / >= / = / == / ===
+        // operadores logicos && / or || / ! negacion, diferente, contrario
+        console.log(boolean + " -- "+ !boolean);
+        //estructuras condicionales if / else / else if / switch / break /
+        //estructuras repetitivas for / while / do while
+        let long_nameuno = nameuno.length;
+        console.log(long_nameuno);
+
+        if(long_nameuno >= 22){
+            let name_minus = nameuno.toLowerCase();
+            console.log(name_minus);
+            console.log(dias_Semana[0]);
+            console.log(users[0].name)
+
+
+        }
+        else{
+            console.log("no tiene la longitud");
+
+        }
+        for(let i =0; i< dias_Semana.length;i++){
+            console.log(dias_Semana[i]);
+        }
+        let i = 0;
+        while(i < dias_Semana.length){
+            console.log(dias_Semana[i]);
+            i++;
+
+        }
+        while(i < users.length){
+            console.log(users[i].name)
+
+            i++;
+        }
+        //funciones 
+        function name_function(){
+            let variable = document.getElementById('variable').value;
+            variable = variable.toUpperCase();
+
+            document.getElementById("titulo").innerText = variable;
+            document.getElementById("titulo").style.color = "green";
+        }
+        document.getElementById("name_event").addEventListener("dbclick", function(){
+            let variable = document.getElementById('variable').value;
+            document.getElementById("titulo").style.background = "gray";
+
+        });
+        document.getElementById("cambiar_fondo").addEventListener( "mouseover", function(){
+            document.getElementById('contenedor').style.background= "red";
+
+        })
+    </script>
+</body>
+</html>
