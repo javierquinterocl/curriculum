@@ -12,13 +12,24 @@
     <button onclick="name_function()" id="name_event">Calcular</button>
     <h1 id="titulo"></h1>
     <p id="cambiar_fondo">cambiar fondo</p>
+    <div id="espacio">
+        <p id="presioneclick">este espacio cambia de fondo</p>
+
+    </div>
+    <h1 id="daleclick"> dale click pa</h1>
     <style>
+        #espacio{
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+        }
         #cambiar_fondo{
             background-color: aqua;
             text-transform: uppercase;
             padding: 10px;
             border-radius: 10px;
             border: 2px solid #dfdfdf;
+            width: 400px;
         }
         #cambiar_fondo:hover{
             box-shadow: 0 0 10px gray;
@@ -109,6 +120,16 @@
         document.getElementById("cambiar_fondo").addEventListener( "mouseover", function(){
             document.getElementById('contenedor').style.background= "red";
 
+        })
+        document.getElementById("cambiar_fondo").addEventListener("mouseout",function(){
+            document.getElementById("contenedor").style.background = "none";
+
+        })
+        document.getElementById("presioneclick").addEventListener("mouseenter", function(){
+            document.getElementById("espacio").style.background = "green";
+        } )
+        document.getElementById("daleclick").addEventListener("click",function(){
+            alert("hola mundo jajaja");
         })
     </script>
 </body>
