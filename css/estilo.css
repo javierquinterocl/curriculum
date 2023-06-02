@@ -329,6 +329,37 @@ transition: all ease-in-out .6s;
     border-color: rgb(41, 109, 255);
 }
 
+
+/* talentos */
+
+.talentos{
+    height: 300px;
+    width: 100%;
+    background-color: #4242ff;
+    display: flex;
+    
+}
+.talentos .texto{
+display: flex;
+justify-content: center;
+width: 50%;
+flex-wrap: wrap;
+}
+.talentos .texto h1{
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+}
+
+.talentos .imagen{
+   
+    height: 300px ;
+}
+.talentos .imagen img{
+    width: 540px;
+    height: 300px;
+}
+
 /* BREAK POINTS */
 @media screen and (max-width:900px){
     .contenido-header > img{
@@ -369,27 +400,29 @@ transition: all ease-in-out .6s;
    }
    .enlaces-header{
     position:fixed;
-    background-color: crimson;
+    background-color: #0509ff;
     top: 0;
-    right: 0;
+    padding: 100px 0 0 15px;
+    right:25%;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    clip-path: circle(0.0% at 0 0);
+    clip-path: inset(0 0 100% 0);
    }
    .nav .hamburgueropen{
-    clip-path: circle(150% at 0 0);
+    clip-path: inset(0 0 0 0);
    }
    .nav .enlaces-header a{
     color: #fff;
     text-transform: uppercase;
     font-weight: 800;
     margin-top: 20px;
+    margin-left: 65px;
     width: 50%;
-    background-color: rgb(255, 151, 151);
+    background-color: #8497ff;
 
    }
 
@@ -431,6 +464,13 @@ transition: all ease-in-out .6s;
    }
 
    /*FOOTER */
-   
+   .talentos .imagen img{
+    display: none;
+   }
+   .talentos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
 
 }
