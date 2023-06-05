@@ -244,6 +244,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: auto;
+    bottom: 0;
 }
 
 .partFooter{
@@ -331,33 +332,70 @@ transition: all ease-in-out .6s;
 
 
 /* talentos */
-
-.talentos{
-    height: 300px;
-    width: 100%;
-    background-color: #4242ff;
+.contenedor3{
     display: flex;
+    width: 100%;
+    height: 500px;
+   background-color: #251EA4; 
+   
+}
+.contenedor3 .imagenmov{
+    position: relative;
+    width: 100%;
+    height: 600px;
     
 }
-.talentos .texto{
-display: flex;
-justify-content: center;
-width: 50%;
-flex-wrap: wrap;
-}
-.talentos .texto h1{
-    width: 50%;
-    font-size: 20px;
-    color: #fff;
+.contenedor3 .imagenmov img{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    top: -100px;
+    right: 50px;
+    bottom: 0;
+    animation: movimiento 4s linear infinite;
 }
 
-.talentos .imagen{
-   
-    height: 300px ;
+.contenedor3 .textomov{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    background: #251EA4;
+background: linear-gradient(131deg, #251EA4 63%, rgb(70,70,70) 63%);
+    
 }
-.talentos .imagen img{
-    width: 540px;
-    height: 300px;
+
+.contenedor3 .textomov p{
+    color: #ffffffd3;
+    font-size: 1.5em;
+    backdrop-filter: blur(5px);
+}
+.contenedor3 .textomov h1{
+    color: #ffffff;
+    
+}
+.textomov button{
+    border: none;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #5f9fff;
+    color: #fff;
+    margin-left: 7px;
+    margin-top: 20px;
+    padding: 10px 0 ;
+}
+
+.textomov button:hover{
+    background-color: #fffefc;
+    
+    color: #030303;
+}
+@keyframes movimiento{
+    
+    50%{
+        right: 30px;
+        top: -90px;
+    }
 }
 
 /* BREAK POINTS */
@@ -389,6 +427,10 @@ flex-wrap: wrap;
     
        footer{
         padding: 10px;
+       }
+
+       .contenedor3{
+        display: none;
        }
 
 }
